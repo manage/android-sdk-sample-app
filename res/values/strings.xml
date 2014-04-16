@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AppSponsorSDKAndroidTestApp</string>
+    <string name="action_settings">Settings</string>
+    <string name="version_number">version</string>
+	<string name="btn_show_ad">Show Ad(Present AD)</string>
+	<string name="btn_show_ad_dev">AD Load(Pre-Cache)</string>
+	<string name="btn_clear">Clear Cache</string>
+	<string name="btn_show_video_ad">Show Video Ad</string>
+	<string name="bg_top">Background Top</string>
+	<string name="bg_bottom">Background Bottom</string>
+	<string name="img_logo">Logo</string>
+</resources>
