@@ -55,27 +55,29 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void willDisappear(DisappearReason reason) {
+				Log.d("testApp", "popupAdLog2 willDisappear " + reason.name());
 				adShown = false;
 			}
 			
 			@Override
 			public void willAppear() {
+				Log.d("testApp", "popupAdLog2 willAppear");
 				adShown = true;
 			}
 			
 			@Override
 			public void popoverDidFailToLoadWithError(Exception exception) {
-				Log.d("sciter", "popupAdLog1 popoverDidFailToLoadWithError");
+				Log.d("testApp", "popupAdLog1 popoverDidFailToLoadWithError");
 			}
 			
 			@Override
 			public void onRewardedAdFinished() {
-				Log.d("sciter", "popupAdLog1 onRewardedAdFinished " + popupAd.rewardedAdStatus());
+				Log.d("testApp", "popupAdLog1 onRewardedAdFinished " + popupAd.rewardedAdStatus());
 			}
 			
 			@Override
 			public void didCacheInterstitial() {
-				Log.d("sciter", "popupAdLog1 didCacheInterstitial");
+				Log.d("testApp", "popupAdLog1 didCacheInterstitial");
 			}
 		});
 		
@@ -83,27 +85,29 @@ public class MainActivity extends Activity {
 			
 			@Override
 			public void willDisappear(DisappearReason reason) {
+				Log.d("testApp", "popupAdLog2 willDisappear " + reason.name());
 				adShown2 = false;
 			}
 			
 			@Override
 			public void willAppear() {
+				Log.d("testApp", "popupAdLog2 willAppear");
 				adShown2 = true;
 			}
 			
 			@Override
 			public void popoverDidFailToLoadWithError(Exception exception) {
-				Log.d("sciter", "popupAdLog2 popoverDidFailToLoadWithError");
+				Log.d("testApp", "popupAdLog2 popoverDidFailToLoadWithError");
 			}
 			
 			@Override
 			public void onRewardedAdFinished() {
-				Log.d("sciter", "popupAdLog2 onRewardedAdFinished " + popupAd2.rewardedAdStatus());
+				Log.d("testApp", "popupAdLog2 onRewardedAdFinished " + popupAd2.rewardedAdStatus());
 			}
 			
 			@Override
 			public void didCacheInterstitial() {
-				Log.d("sciter", "popupAdLog2 didCacheInterstitial");
+				Log.d("testApp", "popupAdLog2 didCacheInterstitial");
 			}
 		});
 		
