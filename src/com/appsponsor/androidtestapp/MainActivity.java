@@ -27,9 +27,6 @@ public class MainActivity extends Activity {
 	private PopupAd popupAd;
 	private RewardedAd popupAd2;
 	
-	private boolean adShown = false;
-	private boolean adShown2 = false;
-	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,13 +53,11 @@ public class MainActivity extends Activity {
 			@Override
 			public void willDisappear(DisappearReason reason) {
 				Log.d("testApp", "popupAdLog2 willDisappear " + reason.name());
-				adShown = false;
 			}
 			
 			@Override
 			public void willAppear() {
 				Log.d("testApp", "popupAdLog2 willAppear");
-				adShown = true;
 			}
 			
 			@Override
@@ -86,13 +81,11 @@ public class MainActivity extends Activity {
 			@Override
 			public void willDisappear(DisappearReason reason) {
 				Log.d("testApp", "popupAdLog2 willDisappear " + reason.name());
-				adShown2 = false;
 			}
 			
 			@Override
 			public void willAppear() {
 				Log.d("testApp", "popupAdLog2 willAppear");
-				adShown2 = true;
 			}
 			
 			@Override
@@ -115,9 +108,7 @@ public class MainActivity extends Activity {
 		btn_show_ad.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (!adShown) {
-					popupAd.load(); 
-				}
+				popupAd.load(); 
 			}
 		});
 		
@@ -125,9 +116,7 @@ public class MainActivity extends Activity {
 		btn_show_ad_dev.setOnClickListener(new OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				if (!adShown2) {
-					popupAd2.load(); 
-				}
+				popupAd2.load(); 
 			}
 		});
 		
