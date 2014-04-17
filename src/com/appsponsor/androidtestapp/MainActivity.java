@@ -27,7 +27,6 @@ public class MainActivity extends Activity {
 	private PopupAd popupAd;
 	private RewardedAd popupAd2;
 	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,20 +43,20 @@ public class MainActivity extends Activity {
 		} catch (NameNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		popupAd2 = new RewardedAd(MainActivity.this, "AwSOMLv4RWef4sjhBpGUYw", "support@appsponsor.com");
-		popupAd = new PopupAd(MainActivity.this, "T0oWVd1kdpO4cjTB5CSSvw");
+
+		popupAd = new PopupAd(MainActivity.this, "oIs29VQKIa2IfaA4FWkEqw");
+		popupAd2 = new RewardedAd(MainActivity.this, "82lEvN030_0zL0kShgS_hw", "support@appsponsor.com");
 		
 		popupAd.setPopupAdListener(new PopupAdListener() {
 			
 			@Override
 			public void willDisappear(DisappearReason reason) {
-				Log.d("testApp", "popupAdLog2 willDisappear " + reason.name());
+				Log.d("testApp", "popupAdLog1 willDisappear " + reason.name());
 			}
 			
 			@Override
 			public void willAppear() {
-				Log.d("testApp", "popupAdLog2 willAppear");
+				Log.d("testApp", "popupAdLog1 willAppear");
 			}
 			
 			@Override
