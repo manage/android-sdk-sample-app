@@ -3,7 +3,9 @@
     package="com.appsponsor.androidtestapp"
     android:versionCode="2"
     android:versionName="1.8" >
-
+<instrumentation android:name="android.test.InstrumentationTestRunner"
+    android:targetPackage="com.appsponsor.androidtestapp"
+    android:label="label" />
     <uses-sdk
         android:minSdkVersion="8" 
         android:targetSdkVersion="17" />
@@ -24,6 +26,8 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         
+         <uses-library android:name="android.test.runner" />
+        
         <meta-data android:name="com.google.android.gms.version" android:value="4323000" />
         <activity 
             android:name="com.appsponsor.androidtestapp.MainActivity"
@@ -40,8 +44,6 @@
         </activity>
          <activity android:name="com.appsponsor.appsponsorsdk.video.VideoAdActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">
-        </activity>
-        
+        </activity>        
     </application>
-
 </manifest>
