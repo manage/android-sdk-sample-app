@@ -95,7 +95,7 @@
         android:layout_marginBottom="12dp"
         android:gravity="center"
         android:lines="1"
-        android:text="Android Demo Application ver. 1.8 (07/22/2013)"
+        android:text="Android Demo Application ver. 3.1 (09/10/2014)"
         android:textColor="@color/white" />
 
 </FrameLayout>
