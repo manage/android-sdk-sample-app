@@ -126,6 +126,26 @@ public class MainActivity extends Activity
                 rewardedAd.presentAd();
             }
         });
+ 
+        this.getButtonWithId(R.id.btn_load_show_popup).setOnClickListener(new View.OnClickListener()
+        {
+
+            @Override
+            public void onClick(View v)
+            {
+            	popupAd.loadAndPresentAd();
+            }
+        });
+
+        this.getButtonWithId(R.id.btn_load_show_rewarded).setOnClickListener(new View.OnClickListener()
+        {
+
+            @Override
+            public void onClick(View v)
+            {
+                rewardedAd.loadAndPresentAd();
+            }
+        });
     }
     
     private Button getButtonWithId(int buttonId)

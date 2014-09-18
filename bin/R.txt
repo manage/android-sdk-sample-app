@@ -99,11 +99,13 @@ int drawable ic_plusone_tall_off_client 0x7f020023
 int drawable logo 0x7f020024
 int drawable powered_by_google_dark 0x7f020025
 int drawable powered_by_google_light 0x7f020026
-int id bgBottom 0x7f07001d
+int id bgBottom 0x7f07001f
 int id bgTop 0x7f070018
 int id book_now 0x7f070010
 int id btn_load_popup 0x7f070019
 int id btn_load_rewarded 0x7f07001a
+int id btn_load_show_popup 0x7f07001d
+int id btn_load_show_rewarded 0x7f07001e
 int id btn_show_popup 0x7f07001b
 int id btn_show_rewarded 0x7f07001c
 int id buyButton 0x7f07000a
@@ -114,8 +116,8 @@ int id grayscale 0x7f070012
 int id holo_dark 0x7f070005
 int id holo_light 0x7f070006
 int id hybrid 0x7f070004
-int id imgLogo 0x7f07001e
-int id info 0x7f07001f
+int id imgLogo 0x7f070020
+int id info 0x7f070021
 int id manage_close_button 0x7f070017
 int id manage_dimmer 0x7f070014
 int id manage_frame 0x7f070015

@@ -63,7 +63,27 @@
 		        android:layout_marginRight="15dp"
 		        android:layout_marginTop="15dp"
 		        android:text="Show RewardedAd" />
-
+		    
+		    <Button
+		        android:id="@+id/btn_load_show_popup"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="15dp"
+		        android:text="Load and Show PopupAd" />
+		    
+		    <Button
+		        android:id="@+id/btn_load_show_rewarded"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center"
+		        android:layout_marginLeft="15dp"
+		        android:layout_marginRight="15dp"
+		        android:layout_marginTop="15dp"
+		        android:text="Load and Show RewardedAd" />
+		    
     	</LinearLayout>
     </ScrollView>
 
@@ -95,7 +115,7 @@
         android:layout_marginBottom="12dp"
         android:gravity="center"
         android:lines="1"
-        android:text="Android Demo Application ver. 3.1 (09/10/2014)"
+        android:text="Android Demo Application ver. 3.1 (09/22/2014)"
         android:textColor="@color/white" />
 
 </FrameLayout>
