@@ -21,8 +21,6 @@ This guide provides integration instructions for the Manage Publisher Android SD
 ###1. Download and Install the SDK
 The SDK for Android is available once you [sign up](https://www.appsponsor.com/user/registration). The Manage Publisher SDK includes everything you need to serve full screen interstitial, video, and playable ad units.
 
-The SDK for Android can be downloaded [here](https://www.appsponsor.com/downloads/AppSponsor-Android-3.1.zip).
-
 For an example, please see our [sample app](https://github.com/manage/android-sdk-sample-app).
 
 ###2. Eclipse Integration
