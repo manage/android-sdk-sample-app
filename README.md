@@ -21,7 +21,7 @@ SDK Version: 3.1
 ###3.1 Change Log:
 ----------------------------------
 * minor bug fixes
-* Added landAndPresent()
+* Added loadAndPresent()
 * Bundled Google Play Services libraries
 
 
