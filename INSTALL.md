@@ -20,7 +20,7 @@ The SDK for Android is available once you [sign up](https://www.appsponsor.com/u
 
 The SDK for Unity can be downloaded here: [ManageSDK-Android-v3.1.zip](/downloads/ManageSDK-Android-v3.1.zip).
 
-For an example, please see our [sample app](https://github.com/manage/android-sdk-sample-app).
+To see an example implementation, please see our [sample app](https://github.com/manage/android-sdk-sample-app).
 
 ### 2. Eclipse Integration
 The Manage Android SDK contains a library project called appsponsorsdk.  
@@ -187,4 +187,76 @@ protected void onDestory(){
     /* Rewarded ad */
     rewardedAd.destroy();
 }
+```
+
+### 6. Optional Steps
+
+#### 6.1 Register Listeners
+
+Add event listeners to perform any customized callback:
+
+```
+popupAd.setPopupAdListener(new PopupAd.PopupAdListener(){
+ 
+    //
+    // These following delegates may be triggered after the load() function:
+    //
+
+    public void popoverDidFailToLoadWithError(Exception exception) {
+        // Called when the ad fails to load.
+    }
+ 
+    public void didCacheInterstitial() {
+        // Called when ad content is ready to display.
+    }
+
+    //
+    // These following delegates will always be triggered after the presentAd() function:
+    //
+
+    public void willAppear() {
+        // Called before the ad shows. For example, you can pause your app here.
+    }
+
+    public void willDisappear() {
+        // Called before the ad disappears. For example, you can have resume your app here.
+    }
+
+
+    public void onRewardedAdFinished(){
+        // Called when rewarded ad is completed
+    }
+
+  });
+});
+```
+
+Example:
+
+```
+// Show alert dialog on ad completion
+popupAd.setPopupAdListener(new PopupAd.IVideoAdListener() {
+
+    public void onRewardedAdFinished(){
+        AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+        builder.setTitle("Congrats!");
+        builder.setMessage("You have earn 10 coins by watching this ad");
+        builder.setPositiveButton("Yes",
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+        });
+        builder.setNegativeButton("No",
+            new DialogInterface.OnClickListener() {
+                public void onClick(DialogInterface dialog, int id) {
+                    dialog.cancel();
+                }
+        });
+
+        AlertDialog alert = builder.create();
+        alert.show();
+    }
+});
+
 ```
