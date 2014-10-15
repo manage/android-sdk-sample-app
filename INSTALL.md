@@ -10,15 +10,13 @@ Requirements and Dependencies:
     * Android version 2.3 or greater
     * Google Play Services Library (in order to use the Google Advertising ID)
     http://developer.android.com/google/play-services/setup.html
-* iOS:
-    * iOS 6+
 * If you are using a Rewarded ad, you will need to set up your [Server to Server](/dashboard/publisher/guides/server_to_server/) callback.
 
 ### 1. Download and Install the SDK
 
 The SDK for Android is available once you [sign up](https://www.appsponsor.com/user/registration). The Manage Publisher SDK includes everything you need to serve full screen interstitial, video, and playable ad units.
 
-The SDK for Unity can be downloaded here: [ManageSDK-Android-v3.1.zip](/downloads/ManageSDK-Android-v3.1.zip).
+The SDK for Android can be downloaded here: [ManageSDK-Android-v3.1.zip](/downloads/ManageSDK-Android-v3.1.zip).
 
 To see an example implementation, please see our [sample app](https://github.com/manage/android-sdk-sample-app).
 
