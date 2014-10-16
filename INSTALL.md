@@ -71,10 +71,10 @@ Add the following meta data inside your `<application>` tag if have not already 
 Declare these activities in your app manifest:
 
 ```
-<activity android:name="com.appsponsor.appsponsorsdk.PopupAdActivity" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent" android:configChanges="keyboardHidden|orientation|screenSize">
+<activity android:name="com.appsponsor.appsponsorsdk.activity.PopupAdActivity" android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent" android:configChanges="keyboardHidden|orientation|screenSize">
 </activity>
 
-<activity android:name="com.appsponsor.appsponsorsdk.video.VideoAdActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:configChanges="keyboardHidden|orientation|screenSize">
+<activity android:name="com.appsponsor.appsponsorsdk.activity.VideoAdActivity" android:screenOrientation="landscape" android:launchMode="singleTop" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:configChanges="keyboardHidden|orientation|screenSize">
 </activity>
 
 ```
