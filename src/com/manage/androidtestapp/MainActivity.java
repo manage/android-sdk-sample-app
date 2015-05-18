@@ -1,4 +1,4 @@
-package com.appsponsor.androidtestapp;
+package com.manage.androidtestapp;
 
 import android.app.Activity;
 import android.os.Bundle;
