@@ -1,10 +1,9 @@
-##Manage Android SDK
-
+##Manage Android SDK Sample App
 
 This is the Manage Publisher Mobile Ads SDK for Android
 
-Modified: 2014/10
-SDK Version: 3.1
+Modified: 2015/05
+SDK Version: 3.2
 
 ###Contains:
 ----------------------------------
@@ -17,6 +16,13 @@ SDK Version: 3.1
 * A Manage zone ID
 * Android version 2.3 or greater
 * Google Play Services
+
+###3.2 Change Log:
+----------------------------------
+* Reduced file size
+* Support for MRAID
+* Support for video end cards
+* Latest "Experience Ad" technology
 
 ###3.1 Change Log:
 ----------------------------------
@@ -36,7 +42,7 @@ Manage sdk.
 You must accept the terms and conditions on the Manage web portal by registering in order to legally use the
 Manage Publisher SDK.
 
-###Contact Us: 
+###Contact Us:
 ----------------------------------
 For more information, please visit Manage.com.  For questions or support, please emails us at
-[support@appsponsor.com](mailto:support@appsponsor.com).
+[pub-support@appsponsor.com](mailto:pub-support@appsponsor.com).
