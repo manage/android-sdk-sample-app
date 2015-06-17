@@ -7,16 +7,16 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
-import com.appsponsor.appsponsorsdk.PopupAd;
-import com.appsponsor.appsponsorsdk.PopupAdListener;
-import com.appsponsor.appsponsorsdk.RewardedAd;
+import com.manage.managesdk.InterstitialAd;
+import com.manage.managesdk.InterstitialAdListener;
+import com.manage.managesdk.RewardedAd;
 
 public class MainActivity extends Activity
 {
-    private static final String TAG_APS_DEMO_APP = "AppsponsorDemoApp";
+    private static final String TAG_APS_DEMO_APP = "ManageDemoApp";
 
-    private PopupAd popupAd;
-    private RewardedAd rewardedAd;
+	private InterstitialAd interstitialAd;
+	private RewardedAd rewardedAd;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -38,11 +38,14 @@ public class MainActivity extends Activity
     private void setupAds()
     {
         // Simple Popup Ad setup
-        this.popupAd = new PopupAd(MainActivity.this, "oIs29VQKIa2IfaA4FWkEqw");
-        this.popupAd.setPopupAdListener(this.getPopupAdListener(this.popupAd));
+		this.interstitialAd = new InterstitialAd(this, "oIs29VQKIa2IfaA4FWkEqw");
+		this.interstitialAd.setInterstitialAdListener(this
+				.getInterstitialAdListener(this.interstitialAd));
+				
         // Simple Rewarded Ad setup
         this.rewardedAd = new RewardedAd(this, "82lEvN030_0zL0kShgS_hw", "support@appsponsor.com");
-        this.rewardedAd.setPopupAdListener(this.getPopupAdListener(this.rewardedAd));
+		this.rewardedAd.setInterstitialAdListener(this
+				.getInterstitialAdListener(this.rewardedAd));
     }
     /**
      * Creates Ad listener which we are using as callback for Ad related events.
@@ -50,38 +53,38 @@ public class MainActivity extends Activity
      * @param ad - ad we are going to "listen" to
      * @return new instance set up to listen provided ad 
      */
-    private PopupAdListener getPopupAdListener(final PopupAd ad)
-    {
-        return new PopupAdListener()
+	private InterstitialAdListener getInterstitialAdListener(
+			final InterstitialAd ad) {
+        return new InterstitialAdListener()
         {
             @Override
             public void willDisappear(DisappearReason reason)
             {
-                Log.d(TAG_APS_DEMO_APP, "popupAd willDisappear " + reason.name());
+                Log.d(TAG_APS_DEMO_APP, "interstitialAd willDisappear " + reason.name());
             }
 
             @Override
             public void willAppear()
             {
-                Log.d(TAG_APS_DEMO_APP, "popupAd willAppear");
+                Log.d(TAG_APS_DEMO_APP, "interstitialAd willAppear");
             }
 
             @Override
             public void popoverDidFailToLoadWithError(Exception exception)
             {
-                Log.d(TAG_APS_DEMO_APP, "popupAd popoverDidFailToLoadWithError: ", exception);
+                Log.d(TAG_APS_DEMO_APP, "interstitialAd popoverDidFailToLoadWithError: ", exception);
             }
 
             @Override
             public void onRewardedAdFinished()
             {
-                Log.d(TAG_APS_DEMO_APP, "popupAd onRewardedAdFinished " + ad.rewardedAdStatus());
+                Log.d(TAG_APS_DEMO_APP, "interstitialAd onRewardedAdFinished " + ad.rewardedAdStatus());
             }
 
             @Override
             public void didCacheInterstitial()
             {
-                Log.d(TAG_APS_DEMO_APP, "popupAd didCacheInterstitial");
+                Log.d(TAG_APS_DEMO_APP, "interstitialAd didCacheInterstitial");
             }
         };
     }
@@ -96,7 +99,7 @@ public class MainActivity extends Activity
             @Override
             public void onClick(View v)
             {
-                popupAd.load();
+                interstitialAd.load();
             }
         });
         this.getButtonWithId(R.id.btn_load_rewarded).setOnClickListener(new View.OnClickListener()
@@ -113,7 +116,7 @@ public class MainActivity extends Activity
             @Override
             public void onClick(View v)
             {
-                popupAd.presentAd();
+                interstitialAd.presentAd();
             }
         });
 
@@ -133,7 +136,7 @@ public class MainActivity extends Activity
             @Override
             public void onClick(View v)
             {
-            	popupAd.loadAndPresentAd();
+            	interstitialAd.loadAndPresentAd();
             }
         });
 
@@ -158,7 +161,7 @@ public class MainActivity extends Activity
     {
         super.onDestroy();
         // Releasing ads
-        this.popupAd.release();
+        this.interstitialAd.release();
         this.rewardedAd.release();
     }
 }
