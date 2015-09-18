@@ -40,11 +40,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.appsponsor.appsponsorsdk.activity.PopupAdActivity"
-            android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent">
-        </activity>
-         <activity android:name="com.appsponsor.appsponsorsdk.activity.VideoAdActivity"
-            android:configChanges="keyboardHidden|orientation|screenSize">
-        </activity>        
+		<activity android:name="com.manage.managesdk.activity.InterstitialAdActivity"
+     	   android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent">
+		</activity>
+
+		<activity android:name="com.manage.managesdk.activity.VideoAdActivity"
+  	      android:configChanges="keyboardHidden|orientation|screenSize">
+		</activity>     
+
+		<activity android:name="com.manage.managesdk.activity.MraidAdActivity"
+			android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="keyboardHidden|orientation|screenSize">
+		</activity>
+
+		<activity android:name="com.manage.managesdk.activity.ManageBrowserActivity"
+        	android:launchMode="singleTop" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:configChanges="orientation|screenSize">
+		</activity>
+        
     </application>
 </manifest>
